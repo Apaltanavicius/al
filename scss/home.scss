@@ -1,0 +1,283 @@
+article.pirmas{
+  
+    background: url(../images/city.png);
+    @include bg-img-prop;
+    background-position: center;
+    padding-bottom: 50px;
+    height: 100%;
+    width: auto;
+    
+    
+    &::before{
+      @include before-content;
+      opacity: 0.63;
+      background: #1C1C1C 0% 0% no-repeat padding-box;
+    }
+  
+    .baltas{
+      width: 8%;
+      height: 2px;
+    }
+  
+    .pirmaskaire{
+      @include flex-col;
+      width: 70%;
+      gap: 40px;
+      z-index: 1;
+      margin: 60px;
+      margin-left: 90px;
+      
+  
+      img:first-child{
+        width: 250px;
+        
+      }
+  
+   
+  
+      
+      h2{
+        width: 53%;
+        color: white;
+        font-size: 1.6em;
+        font-weight: 600;
+      }
+      p{
+        color: white;
+        font-size: 0.8em;
+        width: 75%;
+        line-height: 1.5;
+      }
+      button{
+        cursor: pointer;
+        width: 140px;
+        padding: 8px;
+        background: none;
+        color: white;
+        border-color: white;
+        transition: 0.5s;
+        &:hover{
+          transform: scale(1.1);
+          color: $orange;
+          border-color: $orange;
+
+        }
+
+  
+      }
+  
+    
+    }
+  
+  
+    form.top{
+      @include flex-col-center;
+      background: #ffffff;
+      gap: 15px;
+      margin-right: 90px;
+      margin-top: 70px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      border-radius: 30px;
+      min-width: 340px;
+      max-width: 300px;
+      
+
+      span{
+        color: $orange;
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+      
+      
+  
+      p{
+        font-weight: bold;
+        font-size: 0.8em;
+        width: 68%;
+        padding-top: 20px ;
+        
+      }
+  
+      .radio{
+        margin-right: 85px;
+        margin-bottom: 20px;
+        .mark{
+          color: $grey;
+
+        }
+
+        input:checked ~ .mark {
+          color: $black;
+          opacity: 1;
+          font-weight: 700;
+        }
+        
+      }
+  
+      input[type="radio"]{
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 2px solid $green;
+        border-radius: 20px;
+        position: relative;
+        top: 3px;
+        margin-left: 7px;
+        
+        
+        
+        &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 5px;
+          height: 5px;
+          background: $green;
+          border-radius: 100%;
+          margin: auto;
+          transform: scale(0);
+          transition: 0.3s;
+
+        }
+        &:checked::before{
+          transform: scale(1);
+        }
+        
+        
+      }
+
+      label{
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding-bottom: 10px;
+
+      }
+  
+      hr{
+        width:70%;
+        opacity: 0.6;
+        margin-top: -10px;
+      }
+      
+      .box-textas{
+        margin-right: 80px;
+      }
+  
+      input[type="text"], input[type="number"]{
+        outline: none;
+        border: none;
+        opacity: 0.6;
+        font-size: 0.7em;
+        margin-top: 15px;
+        
+        
+        
+  
+      }
+  
+  
+      h3{
+        background: #F5F5F5;
+        padding: 15px;
+        width: 100%;
+        @include flex-center;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+  
+  
+      button{
+        padding: 16px;
+        font-size: 1.1em;
+        font-weight: 500;
+        background: #41D395;
+        color: white;
+        border: none;
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover{
+          background: #289165;
+          font-size: 1.2em;
+
+        }
+  
+      }
+      
+      
+    }
+  
+  }
+  @media (max-width: 768px){
+    article.pirmas {
+      margin: -50px;
+      width: 114% !important;
+      
+      flex-direction: column;
+
+      
+  
+      .pirmaskaire {
+        margin-bottom: -40px;
+        img {
+          width: 85% !important;
+          
+          margin-left: 25px;
+          
+   
+        }
+        
+        text-align: center;
+        h2 {
+          width: 100%;
+        }
+        p {
+          text-align: justify;
+          width: 90%;
+        }
+        hr {
+          width: 90%;
+          
+        }
+        button {
+          width: 88%;
+          margin: 20px 0;
+        }
+      }
+
+      .virsus-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 110px;
+        
+        
+      }
+     
+    }
+
+    form.top{
+      min-width: 290px !important;
+      hr{
+        margin-left: -20px;
+      }
+
+    }
+  }
+ 
+  @media (max-width: 360px){
+    form.top{
+      margin-right: 60px;
+      min-width: 260px !important;
+    }
+
+  }
